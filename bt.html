@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Apple = function () {
+            this.w = 10;
+            this.getW = function () {
+                return this.w;
+            }
+
+            this.decrease = function () {
+                if (this.w > 0) {
+                    this.w--;
+                }
+            }
+
+            this.isEmpty = function () {
+                if (this.w == 0)
+                    alert('hết');
+            }
+        }
+        let Human = function (name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+
+            this.setGender = function (gender) {
+                this.gender = gender;
+            }
+
+            this.checkApple = function (Apple) {
+                if ((Apple.getW) == 0)
+                    alert('táo hết');
+                    else
+                    alert ('còn');
+            }
+            this.eat = function (Apple) {
+                this.weight += 1;
+                Apple.decrease;
+            }
+            this.say = function (string) {
+                alert(string);
+            }
+
+            this.getName = function () {
+                return this.weight;
+            }
+
+            this.setName = function (string) {
+                this.name = string;
+            }
+
+            this.getWeight = function () {
+                return this.weight;
+            }
+
+            this.setWeight = function (int) {
+                this.weight = int;
+            }
+        }
+
+        let ap1 = new Apple ();
+        console.log (ap1.getW());
+        let adam= new Human ('adam', 'male', 60);
+        let eva= new Human ('eva', 'female', 50);
+        
+        adam.eat (ap1);
+        adam.checkApple(ap1);
+       alert( adam.getWeight());
+       
+
+    </script>
+</body>
+
+</html>
